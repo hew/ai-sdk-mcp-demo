@@ -1,0 +1,22 @@
+{
+  "name": "ai-sdk-undocumented-mcp-demo",
+  "version": "1.0.0",
+  "description": "Minimal MCP server and AI SDK client demonstration",
+  "type": "module",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node client.js",
+    "demo": "node demo.js",
+    "frontend": "cd public && python3 -m http.server 8080",
+    "frontend:py2": "cd public && python -m SimpleHTTPServer 8080",
+    "frontend:npx": "npx serve public -p 8080",
+    "dev": "echo 'Starting servers...' && npm run server & npm run frontend:npx"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.32",
+    "ai": "^5.0.47",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}

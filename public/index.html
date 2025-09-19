@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Demo - Explore Undocumented AI SDK Features</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MCP + AI SDK Integration Demo</h1>
+      <p class="subtitle">Exploring undocumented Model Context Protocol functionality</p>
+    </header>
+
+    <main>
+      <section class="info-section">
+        <h2>What is this?</h2>
+        <p>
+          This demo showcases the hidden <code>experimental_createMCPClient</code> functionality
+          in Vercel's AI SDK. It demonstrates how MCP servers can provide tools that are
+          automatically discovered and executed through a standardized protocol.
+        </p>
+      </section>
+
+      <section class="server-status">
+        <h2>Server Status</h2>
+        <div class="status-indicator">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Checking...</span>
+        </div>
+      </section>
+
+      <section class="tools-section">
+        <h2>Available Tools</h2>
+        <div id="toolsList" class="tools-list">
+          <div class="loading">Discovering tools...</div>
+        </div>
+      </section>
+
+      <section class="playground">
+        <h2>Tool Playground</h2>
+        <div class="tool-selector">
+          <label for="toolSelect">Select Tool:</label>
+          <select id="toolSelect">
+            <option value="">Choose a tool...</option>
+          </select>
+        </div>
+
+        <div id="toolInputs" class="tool-inputs hidden">
+          <!-- Dynamic inputs will be inserted here -->
+        </div>
+
+        <button id="executeBtn" class="execute-btn" disabled>
+          Execute Tool
+        </button>
+
+        <div id="results" class="results hidden">
+          <h3>Results</h3>
+          <pre id="resultContent"></pre>
+        </div>
+      </section>
+
+      <section class="protocol-flow">
+        <h2>Protocol Flow</h2>
+        <div class="flow-diagram">
+          <div class="flow-step" id="flow-init">
+            <span class="step-number">1</span>
+            <span class="step-label">Initialize</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step" id="flow-discover">
+            <span class="step-number">2</span>
+            <span class="step-label">Discover Tools</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step" id="flow-execute">
+            <span class="step-number">3</span>
+            <span class="step-label">Execute</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step" id="flow-result">
+            <span class="step-number">4</span>
+            <span class="step-label">Result</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="logs-section">
+        <h2>Protocol Messages</h2>
+        <div class="log-controls">
+          <button id="clearLogs" class="clear-btn">Clear Logs</button>
+          <label>
+            <input type="checkbox" id="autoScroll" checked>
+            Auto-scroll
+          </label>
+        </div>
+        <div id="logs" class="logs"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Learn more in the blog post:
+        <a href="/blog/exploring-mcp-with-ai-sdk" target="_blank">
+          Exploring the Undocumented MCP Functionality in the AI-SDK
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
