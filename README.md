@@ -1,6 +1,6 @@
 # MCP Demo - Model Context Protocol with AI SDK
 
-This demo showcases the undocumented `experimental_createMCPClient` functionality in Vercel's AI SDK, demonstrating how to build and interact with MCP servers.
+This demo showcases the `experimental_createMCPClient` functionality in Vercel's AI SDK, demonstrating how to build and interact with MCP servers.
 
 ## Features
 
