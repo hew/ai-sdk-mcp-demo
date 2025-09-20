@@ -93,4 +93,4 @@ mcp-demo/
 
 ## Learn More
 
-Read the full blog post: [Exploring the Undocumented MCP Functionality in the AI-SDK](/blog/exploring-mcp-with-ai-sdk)
+Read the full blog post: [Exploring the MCP Functionality in the AI-SDK](/blog/exploring-mcp-with-ai-sdk)
